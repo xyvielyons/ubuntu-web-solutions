@@ -9,6 +9,14 @@ body {
   max-width: 1280px;
 }
 
+.mytestimonialsheading{
+  font-family: "Righteous", serif;
+  font-style: normal;
+  line-height: 110%;
+}
+
+
+
 .mysubheading{
   font-family: "Roboto Mono", monospace;
   font-weight: 700;

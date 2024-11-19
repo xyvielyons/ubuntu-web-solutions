@@ -14,7 +14,7 @@ import { Button } from '@nextui-org/react';
 import ShineBorder from '@/components/ui/shine-border'
 const Portfolio = () => {
   return (
-    <div className='py-[32px] px-[16px] md:px-[24px]' id='Portfolio'>
+    <div className='py-[32px] px-[16px] md:px-[24px] border-b-[1px] border-gray-100 dark:border-gray-800' id='Portfolio'>
         <div className="">
             <div className="space-y-2">
                 <div className="flex items-center justify-start">
