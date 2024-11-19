@@ -67,7 +67,8 @@ export default {
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			marquee: 'marquee var(--duration) infinite linear',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		},
   		keyframes: {
   			'shimmer-slide': {
@@ -111,6 +112,17 @@ export default {
   				},
   				to: {
   					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
   				}
   			}
   		}
