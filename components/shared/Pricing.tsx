@@ -60,7 +60,7 @@ const Portfolio = () => {
           </div>
           <div className="">
             <ShineBorder
-              className="bg-background relative flex h-[480px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
+              className="bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
               color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
             >
               <Card>
