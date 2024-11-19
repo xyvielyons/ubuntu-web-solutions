@@ -44,7 +44,7 @@ export default function NavbarComponent() {
           className="sm:hidden dark:text-white"
         />
         <NavbarBrand>
-          <div className="w-[150px] h-full">
+          <div className="md:w-[150px] h-full w-[100px]">
            <Image src="/ubuntu-web-high-resolution-logo-transparent.png" width={150} height={100} alt="image logo" className="dark:filter dark:brightness-0 dark:invert"></Image>
           </div>
           

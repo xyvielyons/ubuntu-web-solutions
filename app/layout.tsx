@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Roboto } from 'next/font/google';
 import "./globals.css";
 import Providers from "./providers";
 import { DarkModeProvider } from '@/context/DarkModeContext';
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const roboto = Roboto({
+  subsets: ['latin'], // Choose the character subsets you need
+  weight: ['400','500','100','900','300', '700'], // Include specific font weights (e.g., normal, bold)
+  variable: '--font-roboto', // Add a custom CSS variable for the font
 });
 
 export const metadata: Metadata = {
@@ -27,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${roboto.variable} antialiased dark:bg-black`}
       >
         <DarkModeProvider>
         <Providers>
