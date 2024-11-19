@@ -15,18 +15,23 @@ export default function NavbarComponent() {
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setScroll(latest)
-    console.log(latest)
   });
 
   useEffect(() => {
     if(scroll>10){
       setNav("Home")
-      if(scroll>1200){
+      if(scroll>600){
         setNav("Story")
-        if(scroll>3000){
-          setNav("Facilities")
-          if(scroll>3900){
-            setNav("Reviews")
+        if(scroll>1300){
+          setNav("Services")
+          if(scroll>2700){
+            setNav("Portfolio")
+            if(scroll>6000){
+              setNav("Pricing")
+              if(scroll>7400){
+                setNav("Testimonials")
+              }
+            }
           }
         }
       }
@@ -54,7 +59,7 @@ export default function NavbarComponent() {
       <NavbarContent className="hidden sm:flex gap-4 dark:text-white" justify="center">
         <NavbarItem>
           <div className="flex flex-col items-center">
-              <Link to="Home" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px] ${nav==="Home"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("home")}>
+              <Link to="Home" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px] ${nav==="Home"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Home")}>
                 Home
               </Link>
               {nav==="Home" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
@@ -65,7 +70,7 @@ export default function NavbarComponent() {
 
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Story" spy={true} smooth={true} offset={-60} duration={500} aria-current="page" className={`text-[16px] ${nav==="Menu"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Menu")}>
+          <Link to="Story" spy={true} smooth={true} offset={-60} duration={500} aria-current="page" className={`text-[16px] ${nav==="Story"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Story")}>
             Story
           </Link>
           {nav==="Story" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
@@ -74,35 +79,35 @@ export default function NavbarComponent() {
 
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Facilities" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Facilities"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Facilities")}>
+          <Link to="Services" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Services"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Services")}>
             Services
           </Link>
-          {nav==="Facilities" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
+          {nav==="Services" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
 
           </div>
         </NavbarItem>
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Reviews" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Reviews"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Reviews")}>
+          <Link to="Portfolio" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Portfolio"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Portfolio")}>
             Portfolio
           </Link>
-          {nav==="Reviews" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
+          {nav==="Portfolio" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
         </div>
         </NavbarItem>
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Reviews" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Reviews"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Reviews")}>
+          <Link to="Pricing" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Pricing"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Pricing")}>
             Pricing
           </Link>
-          {nav==="Reviews" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
+          {nav==="Pricing" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
         </div>
         </NavbarItem>
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Reviews" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Reviews"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Reviews")}>
+          <Link to="Testimonials" spy={true} smooth={true} offset={-60} duration={500} className={`text-[16px]  ${nav==="Testimonials"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Testimonials")}>
             Testimonials
           </Link>
-          {nav==="Reviews" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
+          {nav==="Testimonials" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
         </div>
         </NavbarItem>
         
@@ -128,14 +133,14 @@ export default function NavbarComponent() {
       <NavbarMenu>
         
           <NavbarMenuItem>
-              <div className="flex items-center border-b-1 border-gray-300 ">
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
               <Link
                 to="Home" 
                 spy={true} 
                 smooth={true} 
                 offset={-60} 
                 duration={500}
-                className={`w-full p-[16px] hover:bg-orange-200 ${nav==="Home"?"text-primarybasecolor text-2xl font-medium":"text-gray-600 text-xl"}`}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Home"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
                 href={`#Home`}
                 onClick={()=>{
                   setNav("Home")
@@ -144,71 +149,111 @@ export default function NavbarComponent() {
               >
                 Home
               </Link>
-              {nav==="Home" && <div className="w-10 h-2 bg-primarybasecolor rounded-sm"></div>}
+              {nav==="Home" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
               </div>
           </NavbarMenuItem>
           <NavbarMenuItem>
-              <div className="flex items-center border-b-1 border-gray-300 ">
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
               <Link
-                to="Menu" 
+                to="Story" 
                 spy={true} 
                 smooth={true} 
                 offset={-60} 
                 duration={500}
-                className={`w-full p-[16px] hover:bg-orange-200 ${nav==="Menu"?"text-primarybasecolor text-2xl font-medium":"text-gray-600 text-xl"}`}
-                href={`#Menu`}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Story"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
+                href={`#Story`}
                 onClick={()=>{
-                  setNav("Menu")
+                  setNav("Story")
                   setIsMenuOpen(false)
                 }}
               >
-                Menu
+                Story
               </Link>
-              {nav==="Menu" && <div className="w-10 h-2 bg-primarybasecolor rounded-sm"></div>}
+              {nav==="Story" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
               </div>
           </NavbarMenuItem>
           <NavbarMenuItem>
-              <div className="flex items-center border-b-1 border-gray-300 ">
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
               <Link
-                to="Facilities" 
+                to="Services" 
                 spy={true} 
                 smooth={true} 
                 offset={-60} 
                 duration={500}
-                className={`w-full p-[16px] hover:bg-orange-200 ${nav==="Facilities"?"text-primarybasecolor text-2xl font-medium":"text-gray-600 text-xl"}`}
-                href={`#Facilities`}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Services"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
+                href={`#Services`}
                 onClick={()=>{
-                  setNav("Facilities")
+                  setNav("Services")
                   setIsMenuOpen(false)
-
                 }}
               >
-                Facilities
+                Services
               </Link>
-              {nav==="Facilities" && <div className="w-10 h-2 bg-primarybasecolor rounded-sm"></div>}
+              {nav==="Services" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
               </div>
           </NavbarMenuItem>
           <NavbarMenuItem>
-              <div className="flex items-center border-b-1 border-gray-300 ">
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
               <Link
-                to="Reviews" 
+                to="Portfolio" 
                 spy={true} 
                 smooth={true} 
                 offset={-60} 
                 duration={500}
-                className={`w-full p-[16px] hover:bg-orange-200 ${nav==="Reviews"?"text-primarybasecolor text-2xl font-medium":"text-gray-600 text-xl"}`}
-                href={`#Reviews`}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Portfolio"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
+                href={`#Portfolio`}
                 onClick={()=>{
-                  setNav("Reviews")
+                  setNav("Portfolio")
                   setIsMenuOpen(false)
-
                 }}
               >
-                Reviews
+                Portfolio
               </Link>
-              {nav==="Reviews" && <div className="w-10 h-2 bg-primarybasecolor rounded-sm"></div>}
+              {nav==="Portfolio" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
               </div>
           </NavbarMenuItem>
+          <NavbarMenuItem>
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
+              <Link
+                to="Pricing" 
+                spy={true} 
+                smooth={true} 
+                offset={-60} 
+                duration={500}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Pricing"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
+                href={`#Pricing`}
+                onClick={()=>{
+                  setNav("Pricing")
+                  setIsMenuOpen(false)
+                }}
+              >
+                Pricing
+              </Link>
+              {nav==="Pricing" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
+              </div>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+              <div className="flex items-center border-b-1 border-gray-300 dark:border-gray-800">
+              <Link
+                to="Testimonials" 
+                spy={true} 
+                smooth={true} 
+                offset={-60} 
+                duration={500}
+                className={`w-full p-[16px] dark:text-white hover:bg-gray-100 active:bg-gray-100 dark:hover:text-black ${nav==="Testimonials"?"text-gray-800 text-2xl font-medium":"text-gray-600 text-xl"}`}
+                href={`#Testimonials`}
+                onClick={()=>{
+                  setNav("Testimonials")
+                  setIsMenuOpen(false)
+                }}
+              >
+                Testimonials
+              </Link>
+              {nav==="Testimonials" && <div className="w-8 h-2 bg-black dark:bg-white rounded-sm"></div>}
+              </div>
+          </NavbarMenuItem>
+          
+          
       </NavbarMenu>
     </Navbar>
    

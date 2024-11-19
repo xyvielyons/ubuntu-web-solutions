@@ -11,7 +11,7 @@ export default function HeroSection() {
    return (
       <div className="bg-background relative flex size-full w-full overflow-hidden justify-center items-center h-[500px] md:h-[600px] p-2 border-b-[1px] border-gray-100 dark:border-gray-800" id="Home">
          <Image src="/1.svg" width={30} height={30} alt='star' className='absolute top-8 left-10 md:top-[40px] md:left-[80px] lg:top-[60px] lg:left-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
-         <Image src="/3.svg" width={50} height={50} alt='star' className='absolute top-12 right-10 md:top-[100px] md:right-[80px] lg:top-[130px] lg:right-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
+         <Image src="/3.svg" width={50} height={50} alt='star' className='absolute top-12 right-10 md:top-[90px] md:right-[80px] lg:top-[120px] lg:right-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
          <Image src="/2.svg" width={35} height={35} alt='smiley' className='absolute top-8 md:top-[60px] lg:top-[80px]  dark:filter dark:brightness-0 dark:invert'></Image>
          <Image src="/4.svg" width={50} height={50} alt='star' className='absolute bottom-0 right-12 md:right-[60px] lg:right-[80px] dark:filter dark:brightness-0 dark:invert'></Image>
         <div className="z-10 space-y-2 w-full" >
