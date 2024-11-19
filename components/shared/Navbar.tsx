@@ -1,9 +1,9 @@
 'use client'
 import React,{useState,useEffect} from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 import {Link} from 'react-scroll';
 import Image from "next/image.js";
 import { useScroll,useMotionValueEvent } from "framer-motion";
@@ -115,8 +115,8 @@ export default function NavbarComponent() {
       <NavbarContent justify="end" >
         <NavbarItem>
           <div className="flex space-x-[4px]">
-              <a href="https://x.com/xyvielyons" target='_blank'><button className="h-[40px] w-[32px]  flex items-center justify-center ">
-                <FaSquareXTwitter className="w-[24px] h-[24px] text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"/>
+              <a href="https://wa.me/+254728440683" target='_blank'><button className="h-[40px] w-[32px]  flex items-center justify-center ">
+                <FaWhatsappSquare className="w-[24px] h-[24px] text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"/>
               </button></a>
               <a href="https://www.instagram.com/xaviertechnologies/" target='_blank'><button className="h-[40px] w-[32px]  flex items-center justify-center ">
                 <FaInstagram className="w-[24px] h-[24px] text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"/>
