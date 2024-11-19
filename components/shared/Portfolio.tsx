@@ -4,11 +4,14 @@ import { PortfolioLinks } from '@/constants/PorfolioLinks'
 import PortfolioCards from '../cards/PortfolioCards'
 const Portfolio = () => {
   return (
-    <div className='py-[32px] px-[16px]'>
+    <div className='py-[32px] px-[16px] md:px-[24px]' id='Portfolio'>
         <div className="">
             <div className="space-y-2">
-                <h1 className='text-[35px] md:text-[40px] font-bold text-gray-800 dark:text-white'>OUR PORTFOLIO</h1>
-                <p className='mysubheading text-[16px]'>“See How We Bring Visions to Life.” </p>
+                <div className="flex items-center justify-start">
+                    <h1 className='text-[35px] md:text-[40px] font-bold text-gray-800 dark:text-white'>OUR PORTFOLIO</h1>
+                    <Image src="/person.svg" alt='person' width={30} height={30} className='ml-2 dark:filter dark:brightness-50 dark:invert'></Image>
+                </div>
+                <p className='mysubheading text-[16px] text-gray-800 dark:text-gray-100'>“See How We Bring Visions to Life.” </p>
                 <p className='text-[17px] text-gray-600 dark:text-gray-200'>Check out our work and see how we've helped businesses like yours achieve stunning, high-impact websites. </p>
                 <div className="pt-2">
                     <Image src="/arrowportfolio.svg" alt="portfolio" width={100} height={100} className='dark:filter dark:brightness-50 dark:invert'></Image>

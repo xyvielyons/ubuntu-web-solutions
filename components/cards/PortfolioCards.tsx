@@ -18,7 +18,7 @@ const PortfolioCards = ({LinkedInIframes}:{LinkedInIframes:any}) => {
    </CardHeader>
    <CardContent>
     <div className="h-[500px]">
-      <iframe src={iframe.src}  className="iframe-fill" title="Embedded post" ></iframe>
+      <iframe src={iframe.src}  className="iframe-fill" title="Embedded post"></iframe>
     </div>
    </CardContent>
  </Card>

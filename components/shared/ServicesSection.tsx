@@ -15,7 +15,7 @@ const ServicesSection = () => {
         <div className="w-full items-center justify-center">
             <div className="flex items-center justify-center gap-2">
                 <h1 className='text-[30px] md:text-[35px] lg:text-[40px] font-bold text-center text-gray-800 dark:text-white'>Services We Provide</h1>
-                <Image src="/hand.svg" alt="hand" width={40} height={40} className='dark:filter dark:brightness-0 dark:invert'></Image>
+                <Image src="/hand.svg" alt="hand" width={40} height={40} className='dark:filter dark:brightness-50 dark:invert'></Image>
             </div>
             
             <p className='text-center text-md text-gray-600 dark:text-slate-100'>“Empowering Your Business with Tailored Web Solutions” </p>

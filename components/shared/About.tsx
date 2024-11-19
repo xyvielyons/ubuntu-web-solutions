@@ -9,7 +9,7 @@ function About() {
         <div className="p-4 w-full md:w-1/2 md:flex md:items-start md:justify-center md:flex-col">
             <div className="flex items-center justify-start">
                 <h1 className='text-[40px] font-bold text-gray-800 dark:text-white'>Our Story</h1>
-                <Image src="/crown.svg" alt="crown" width={60} height={60} className='ml-2 dark:filter dark:brightness-0 dark:invert'></Image>
+                <Image src="/crown.svg" alt="crown" width={60} height={60} className='ml-2 dark:filter dark:brightness-50 dark:invert'></Image>
             </div>
             <p className='text-[24px] mysubheading text-gray-800 dark:text-white'>“Passion-Driven Websites, Built to Perform.” </p>
             <p className='pt-[16px] text-md text-gray-700 dark:text-slate-50'>At Ubuntu Web we don’t just build websites—we bring your ideas to life. What started as a vision to create unique, high-performing websites has turned into a passion for helping businesses like yours stand out online. 
