@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import {Link} from 'react-scroll';
 import Image from "next/image.js";
 import { useScroll,useMotionValueEvent } from "framer-motion";
+import DarkModeToggle from "./DarkModeToggle";
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [scroll, setScroll] = useState<any>()
@@ -118,6 +119,7 @@ export default function NavbarComponent() {
               <a href="https://www.linkedin.com/in/xyvie-lyons-a8873820a" target='_blank'><button className="h-[40px] w-[32px]  flex items-center justify-center">
                 <FaLinkedin className="w-[24px] h-[24px] text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"/>
               </button></a>
+              <DarkModeToggle></DarkModeToggle>
           </div>
           
           
