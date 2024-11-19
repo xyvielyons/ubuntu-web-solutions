@@ -37,7 +37,7 @@ export default function NavbarComponent() {
 
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="shadow-4dp border-b-[1.2px] dark:border-gray-800 dark:bg-black border-gray-300">
+    <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="shadow-4dp border-b-[1.2px] dark:border-gray-800 dark:bg-black border-gray-300 dark:opacity-85">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
