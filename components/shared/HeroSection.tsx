@@ -9,7 +9,7 @@ import Image from 'next/image'
 export default function HeroSection() {
    const words = ["Growth", "Engagement", "Conversions", "Innovation","Excellence","Success"];
    return (
-      <div className="bg-background relative flex size-full w-full overflow-hidden justify-center items-center h-[500px] md:h-[600px] p-2 border-b-[1px] border-gray-100" id="Home">
+      <div className="bg-background relative flex size-full w-full overflow-hidden justify-center items-center h-[500px] md:h-[600px] p-2 border-b-[1px] border-gray-100 dark:border-gray-800" id="Home">
          <Image src="/1.svg" width={30} height={30} alt='star' className='absolute top-8 left-10 md:top-[40px] md:left-[80px] lg:top-[60px] lg:left-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
          <Image src="/3.svg" width={50} height={50} alt='star' className='absolute top-12 right-10 md:top-[100px] md:right-[80px] lg:top-[130px] lg:right-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
          <Image src="/2.svg" width={35} height={35} alt='smiley' className='absolute top-8 md:top-[60px] lg:top-[80px]  dark:filter dark:brightness-0 dark:invert'></Image>

@@ -22,7 +22,7 @@ export default function NavbarComponent() {
     if(scroll>10){
       setNav("Home")
       if(scroll>1200){
-        setNav("Menu")
+        setNav("Story")
         if(scroll>3000){
           setNav("Facilities")
           if(scroll>3900){
@@ -65,10 +65,10 @@ export default function NavbarComponent() {
 
         <NavbarItem>
         <div className="flex flex-col items-center">
-          <Link to="Menu" spy={true} smooth={true} offset={-60} duration={500} aria-current="page" className={`text-[16px] ${nav==="Menu"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Menu")}>
+          <Link to="Story" spy={true} smooth={true} offset={-60} duration={500} aria-current="page" className={`text-[16px] ${nav==="Menu"?"text-primarycolor font-medium":"text-gray-600"}`} onClick={()=>setNav("Menu")}>
             Story
           </Link>
-          {nav==="Menu" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
+          {nav==="Story" && <div className="w-6 h-1 bg-primarycolor rounded-sm"></div>}
         </div>
         </NavbarItem>
 
