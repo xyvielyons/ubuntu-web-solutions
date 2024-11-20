@@ -7,6 +7,7 @@ import Footer from "@/components/shared/Footer";
 import Portfolio from "@/components/shared/Portfolio";
 import Pricing from "@/components/shared/Pricing";
 import Testimonials from "@/components/shared/Testimonials";
+import Tawk from '@/lib/Tawk'
 export default function Home() {
   return (
     <div className="dark:bg-black bg-background h-full max-w-screen-xl mx-auto space-y-2 md:space-y-4">
@@ -19,6 +20,7 @@ export default function Home() {
       <Pricing></Pricing>
       <Testimonials></Testimonials>
       <Footer></Footer>
+      <Tawk></Tawk>
     </div>
   );
 }

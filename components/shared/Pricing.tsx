@@ -12,7 +12,14 @@ import {
 import { TiTick } from "react-icons/ti";
 import { Button } from '@nextui-org/react';
 import ShineBorder from '@/components/ui/shine-border'
+import { useAppDispatch } from '@/store/hooks/hooks'
+import { activate } from '@/store/slices/chatSlice'
 const Portfolio = () => {
+  const dispatch = useAppDispatch();
+
+   const openChatBox = ()=>{
+      dispatch(activate())
+  }
   return (
     <div className='py-[32px] px-[16px] md:px-[24px] border-b-[1px] border-gray-100 dark:border-gray-800' id='Pricing'>
         <div className="">
@@ -53,7 +60,7 @@ const Portfolio = () => {
               </CardContent>
               <CardFooter className=''>
                 <div className="w-full h-full mt-[25px] lg:mt-[45px]">
-                  <Button className='w-full' radius='sm'>Make an order</Button>
+                  <Button onClick={openChatBox} className='w-full' radius='sm'>Make an order</Button>
                 </div>
               </CardFooter>
             </Card>
@@ -91,7 +98,7 @@ const Portfolio = () => {
                 </CardContent>
                 <CardFooter>
                   <div className="w-full">
-                    <Button className='w-full' radius='sm'>Make an order</Button>
+                    <Button onClick={openChatBox} className='w-full' radius='sm'>Make an order</Button>
                   </div>
                 </CardFooter>
               </Card>
@@ -126,7 +133,7 @@ const Portfolio = () => {
               </CardContent>
               <CardFooter>
                 <div className="w-full">
-                  <Button className='w-full' radius='sm'>Make an order</Button>
+                  <Button onClick={openChatBox} className='w-full' radius='sm'>Make an order</Button>
                 </div>
               </CardFooter>
             </Card>
@@ -158,7 +165,7 @@ const Portfolio = () => {
               </CardContent>
               <CardFooter>
                 <div className="w-full mt-[5px] md:mt-[20px] lg:mt-[25px]">
-                  <Button className='w-full' radius='sm'>Make an order</Button>
+                  <Button onClick={openChatBox} className='w-full' radius='sm'>Make an order</Button>
                 </div>
               </CardFooter>
             </Card>

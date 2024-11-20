@@ -6,8 +6,15 @@ import { RainbowButton } from '@/components/ui/rainbow-button'
 import { FlipWords } from "../ui/flip-words";
 import { MdArrowOutward } from "react-icons/md";
 import Image from 'next/image'
+import { useAppDispatch } from '@/store/hooks/hooks'
+import { activate } from '@/store/slices/chatSlice'
 export default function HeroSection() {
    const words = ["Growth", "Engagement", "Conversions", "Innovation","Excellence","Success"];
+   const dispatch = useAppDispatch();
+
+   const openChatBox = ()=>{
+      dispatch(activate())
+  }
    return (
       <div className="bg-background relative flex size-full w-full overflow-hidden justify-center items-center h-[500px] md:h-[600px] p-2 border-b-[1px] border-gray-100 dark:border-gray-800" id="Home">
          <Image src="/1.svg" width={30} height={30} alt='star' className='absolute top-8 left-10 md:top-[40px] md:left-[80px] lg:top-[60px] lg:left-[100px] dark:filter dark:brightness-0 dark:invert'></Image>
@@ -39,7 +46,7 @@ export default function HeroSection() {
                  <Image className='dark:filter dark:brightness-0 dark:invert' src="/arrow.svg" alt="arroe head" width={90} height={90}></Image>
                </div>
                
-               <RainbowButton>Get In Touch Today <MdArrowOutward className='w-[24px] h-[24px] ml-2' /></RainbowButton>
+               <RainbowButton onClick={openChatBox}>Get In Touch Today <MdArrowOutward className='w-[24px] h-[24px] ml-2' /></RainbowButton>
 
             </div>
         </div>
