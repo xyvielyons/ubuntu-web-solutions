@@ -1,7 +1,6 @@
 'use client'
 import { ny } from '@/lib/utils'
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern'
-import ShimmerButton from '@/components/ui/shimmer-button'
 import { RainbowButton } from '@/components/ui/rainbow-button'
 import { FlipWords } from "../ui/flip-words";
 import { MdArrowOutward } from "react-icons/md";
