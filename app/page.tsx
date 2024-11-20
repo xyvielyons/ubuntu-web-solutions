@@ -20,7 +20,7 @@ export default function Home() {
       <Pricing></Pricing>
       <Testimonials></Testimonials>
       <Footer></Footer>
-      {/* <Tawk></Tawk> */}
+      <Tawk></Tawk>
     </div>
   );
 }
