@@ -1,3 +1,4 @@
+'use client'
 import { ny } from '@/lib/utils'
 import Marquee from '@/components/ui/marquee'
 import Image from 'next/image'

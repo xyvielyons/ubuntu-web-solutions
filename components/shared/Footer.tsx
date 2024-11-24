@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
@@ -13,7 +14,7 @@ const Footer = () => {
             <Link href="https://www.instagram.com/xaviertechnologies/"><FaSquareInstagram className="w-[24px] h-[24px] text-slate-400 m-2 hover:text-slate-600 dark:hover:text-white active:text-slate-600 dark:active:text-white"></FaSquareInstagram></Link>
         </div>
         <div className="flex flex-row w-full justify-center items-center cursor-pointer">
-            <h1 className='dark:text-slate-100 text-gray-800 text-md font-regular'>UbuntuWebSolutions©<span>{currentYear}</span>. All rights reserved</h1>
+            <h1 className='dark:text-slate-100 text-gray-800 text-md font-regular text-center'>UbuntuWebSolutions©<span>{currentYear}</span>. All rights reserved</h1>
         </div>
     </div>
   )

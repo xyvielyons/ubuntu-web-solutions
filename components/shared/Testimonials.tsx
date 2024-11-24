@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import MarqueeDemoVertical from './Marquee'
 import Image from 'next/image'
@@ -12,7 +13,7 @@ const Testimonials = () => {
             <p className='text-md text-gray-600 dark:text-gray-100'>Nothing speaks louder than the voices of satisfied clients. Here’s what our partners have to say about their experiences with ubuntu web. From seamless website launches to unmatched support, discover why businesses trust us to bring their vision to life. </p>
         </div>
         <div className="relative md:w-1/2 rounded-xl p-2">
-            <BorderBeam size={600} duration={12} delay={9} />
+            {/* // <BorderBeam size={600} duration={12} delay={9} /> */}
             <MarqueeDemoVertical/>
             
         </div>

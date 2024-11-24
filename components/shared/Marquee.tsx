@@ -1,3 +1,4 @@
+'use client'
 import { ny } from "@/lib/utils";
 import Marquee from "../ui/marquee";
 const reviews = [

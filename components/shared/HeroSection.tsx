@@ -51,12 +51,12 @@ export default function HeroSection() {
         </div>
         
          <AnimatedGridPattern
-            numSquares={60}
-            maxOpacity={0.3}
+            numSquares={30}
+            maxOpacity={0.5}
             duration={2}
             repeatDelay={1}
             className={ny(
-               '[mask-image:radial-gradient(570px_circle_at_center,white,transparent)]',
+               '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]',
                'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
             )}
          />
